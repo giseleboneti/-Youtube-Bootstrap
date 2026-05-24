@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YouTube Bootstrap</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    body{
+      background-color: #000000;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      border-bottom: 1px solid #000000;
+    }
+
+    /* MENU */
+    .menu-lateral{
+      min-height: 100vh;
+    }
+
+    .nav-link{
+      transition: 0.3s;
+      border-radius: 10px;
+    }
+
+    .nav-link:hover{
+      background-color: #333;
+    }
+
+    /* CARDS */
+    .video-card{
+      background-color: #202020;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .video-card:hover{
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(255,0,0,0.5);
+    }
+
+    .card-body{
+      background-color: #202020;
+    }
+
+    .card-title{
+      color: white;
+      font-size: 15px;
+      min-height: 50px;
+    }
+
+    /* IMAGENS */
+    .card-img-top{
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* BOTÕES */
+    .btn-danger{
+      border-radius: 20px;
+      padding: 5px 15px;
+    }
+
+    /* INPUT */
+    .form-control{
+      border-radius: 20px;
+    }
+
+    /* RESPONSIVO */
+    @media(max-width:768px){
+
+      .menu-lateral{
+        min-height: auto;
+      }
+
+      .navbar form{
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .navbar{
+        flex-direction: column;
+        align-items: start;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark bg-dark px-3 sticky-top">
+
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="bi bi-youtube text-danger fs-2 me-2"></i>
+      YouTube
+    </a>
+
+    <form class="d-flex w-50">
+      <input class="form-control me-2"
+      type="search"
+      placeholder="Pesquisar vídeos">
+
+      <button class="btn btn-danger">
+        Buscar
+      </button>
+    </form>
+
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- MENU -->
+      <aside class="col-lg-2 col-md-3 bg-black text-white p-3 menu-lateral">
+
+        <ul class="nav flex-column">
+
+          <li class="nav-item mb-3">
+            <a href="#" class="nav-link text-white">
+              <i class="bi bi-house-door-fill me-2"></i>
+              Início
+            </a>
+          </li>
+
+          <li class="nav-item mb-3">
+            <a href="#" class="nav-link text-white">
+              <i class="bi bi-fire me-2"></i>
+              Em alta
+            </a>
+          </li>
+
+          <li class="nav-item mb-3">
+            <a href="#" class="nav-link text-white">
+              <i class="bi bi-collection-play me-2"></i>
+              Inscrições
+            </a>
+          </li>
+
+          <li class="nav-item mb-3">
+            <a href="#" class="nav-link text-white">
+              <i class="bi bi-clock-history me-2"></i>
+              Histórico
+            </a>
+          </li>
+
+        </ul>
+
+      </aside>
+
+      <!-- VÍDEOS -->
+      <main class="col-lg-10 col-md-9 p-4">
+
+        <div class="row g-4">
+
+          <!-- VÍDEO 1 -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/hWhl6ijsAXw/sddefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                    Pitty - Teto de Vidro (Clipe Oficial)
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=hWhl6ijsAXw"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 2 -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/x7WHL-o5tMo/hqdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                    Pitty - Equalize (Clipe Oficial)
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=x7WHL-o5tMo"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 3 -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/W4-G-itMgjI/hqdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Pitty - Máscara (Clipe Oficial)
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=W4-G-itMgjI"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 4 -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/aXJ_Ub1xbhw/hqdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Pitty - Admirável Chip Novo (Clipe Oficial)
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=aXJ_Ub1xbhw"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 5 -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/TJRIZS4Z7Mw/maxresdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Charlie Brown JR. - Proibida Pra Mim
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=TJRIZS4Z7Mw"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 6 -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/HzbOhR_b0XM/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AHUB4AC0AWKAgwIABABGFMgXyhlMA8=&rs=AOn4CLCCbrtJAhdJQk13jDZ4xeUXNjWLMg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Charlie Brown Jr - Zóio D Lula (Video Oficial HD)
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=HzbOhR_b0XM"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 7 -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/DRhEueqE7Uw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBKIEopp5rMg-bm4_NG-96vxdsb6w"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Lugar Ao Sol
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=DRhEueqE7Uw"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 8 -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/mug-46XOsFA/maxresdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Lutar Pelo Que E Meu
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=mug-46XOsFA"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 9 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/x7UHl9Kf2CI/maxresdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  CPM22 - Um Minuto Para O Fim Do Mundo
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=x7UHl9Kf2CI"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 10 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/juM8luwwMoo/maxresdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                    Dias Atrás
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=juM8luwwMoo"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 11-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/5ZxXkEqd3uA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAJ3uqRN5yg4owjcqvXsAkCOKcg-g"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Não Sei Viver Sem Ter Você
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=iQhVPNY7S9k"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 12 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/YsnMBgJjHZ4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCr9Q6_IFDU4ZMK9kVd2CAf1d3LbA"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Tarde De Outubro
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=YsnMBgJjHZ4"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 13 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/XLpdc_uVSgY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDfgDu24jgH92F4oQxuC0N_9jk4VQ"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Skank - Vamos Fugir (Lyric Video)
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=XLpdc_uVSgY"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 14-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/FBVV13YiBCc/maxresdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Skank - Ainda gosto dela
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=FBVV13YiBCc"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 15 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/v3SQTOZO36E/maxresdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Skank - Sutilmente (Clipe Oficial)
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=v3SQTOZO36E"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 16 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/EofmoQhm1sw/maxresdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  Skank - Vou Deixar
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=EofmoQhm1sw"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 17 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/BPbCLtBl_g4/sddefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  O Rappa - Anjos "Pra Quem Tem Fé" (Webclipe) #novosomdorappa - YouTube
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=BPbCLtBl_g4"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 18-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/kzjQyKddSYI/maxresdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                    Minha Alma (A Paz Que Eu Não Quero) - O Rappa
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=kzjQyKddSYI"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!--VÍDEO 19 -->
+           <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/vgZwa7GKRCA/maxresdefault.jpg"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  O Rappa - Auto-Reverse (Clipe Oficial)
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=vgZwa7GKRCA"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <!-- VÍDEO 20-->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card video-card">
+
+              <img src="https://i.ytimg.com/vi/8vbkkn6XXBo/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-BIAC4AOKAgwIABABGGUgXChMMA8=&rs=AOn4CLDLHq_UCIAk6UbQcN0woRPdgFCu0Q"
+              class="card-img-top"
+              alt="thumb">
+
+              <div class="card-body">
+
+                <h6 class="card-title">
+                  O Rappa - Pescador De Ilusões (Ao Vivo)
+                </h6>
+
+                <a href="https://www.youtube.com/watch?v=8vbkkn6XXBo"
+                target="_blank"
+                class="btn btn-danger btn-sm">
+
+                  Assistir
+
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
